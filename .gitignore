@@ -1,0 +1,44 @@
+# macOS
+.DS_Store
+
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+
+# Training/evaluation artifacts
+eval_results*/
+**/eval_results*/
+work_dir*/
+**/work_dir*/
+output/
+outputs/
+**/output/
+**/outputs/
+logs/
+**/logs/
+runs/
+**/runs/
+wandb/
+**/wandb/
+artifacts/
+**/artifacts/
+checkpoints/
+**/checkpoints/
+checkpoint*/
+**/checkpoint*/
+ckpt/
+**/ckpt/
+saves/
+**/saves/

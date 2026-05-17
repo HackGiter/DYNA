@@ -1,0 +1,9 @@
+[submodule "LLaMA-Factory"]
+	path = LLaMA-Factory
+	url = https://github.com/hiyouga/LLaMA-Factory.git
+	ignore = dirty
+
+[submodule "llama-recipes"]
+	path = llama-recipes
+	url = https://github.com/meta-llama/llama-recipes.git
+	ignore = dirty
