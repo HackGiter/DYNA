@@ -16,3 +16,8 @@
   `examples/train_full/sae/`, `exec/ift/`, and ad hoc `exec/*.sh` as local
   artifacts. Keep reusable DYNA launch templates under `examples/dyna/` and
   `exec/dyna/`.
+- DYNA launch helpers should cover the current `rwcls` matrix by accepting
+  existing config stems from `examples/train_full/instruct_tuning/` rather than
+  creating many tracked copies. Do not add finance as a DYNA domain unless the
+  user explicitly designs a new finance DYNA experiment; current finance files
+  are plain SFT/LoRA launchers.
