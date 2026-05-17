@@ -28,6 +28,7 @@ outputs/
 **/outputs/
 logs/
 **/logs/
+kernel_meta/
 runs/
 **/runs/
 wandb/
