@@ -1,16 +1,13 @@
 # DYNA
 
 DYNA is a local research workspace for the paper algorithm "Dynamic Rescaling
-Anomalous Token with 1D Convolution". The top-level repository is an umbrella
-repo. The actual code lives in two child repositories:
+Anomalous Token with 1D Convolution". The repository is now a single monorepo
+that vendors the two codebases used in this project:
 
 - `LLaMA-Factory`: training code, DYNA implementation, and local launch
   configs.
 - `llama-recipes`: evaluation framework and reusable evaluation launcher
   examples.
-
-The child directories are tracked from the top-level repo as submodules. Make
-code changes inside the child repo that owns the file.
 
 ## Repository Layout
 
@@ -66,7 +63,7 @@ rescales losses after warmup.
 
 Important: the `dyna` training stage must be registered in the LLaMA-Factory
 hparams/parser code before running `stage: dyna` configs. In this workspace,
-that wiring is in the LLaMA-Factory working tree.
+that wiring is in the vendored `LLaMA-Factory` tree.
 
 ## Current DYNA Config Matrix
 
@@ -177,13 +174,11 @@ kernel metadata should remain local.
 # Top-level workspace
 git status --short --branch
 
-# LLaMA-Factory child repo
-cd LLaMA-Factory
-git status --short --branch --ignored=matching -- examples/dyna exec/dyna
-bash -n exec/dyna/*.sh
-exec/dyna/run_dyna.sh list
+# LLaMA-Factory subtree
+git status --short --branch --ignored=matching -- LLaMA-Factory/examples/dyna LLaMA-Factory/exec/dyna
+bash -n LLaMA-Factory/exec/dyna/*.sh
+LLaMA-Factory/exec/dyna/run_dyna.sh list
 
-# llama-recipes child repo
-cd ../llama-recipes
-git status --short --branch
+# evaluation helpers
+git status --short --branch -- llama-recipes/tools/benchmarks/llm_eval_harness/meta_eval
 ```

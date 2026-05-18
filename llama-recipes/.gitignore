@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__
+.ipynb_checkpoints
+wandb/
+artifacts/
+
+# Local eval artifacts and one-off launch scripts
+tools/benchmarks/llm_eval_harness/meta_eval/eval_results*/
+tools/benchmarks/llm_eval_harness/meta_eval/work_dir*/
+kernel_meta/
+tools/benchmarks/llm_eval_harness/meta_eval/lm_eval_*.sh

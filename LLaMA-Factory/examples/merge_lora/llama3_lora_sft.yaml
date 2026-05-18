@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /data/pretrained-models/meta/Llama-3.2-3B-Instruct
+adapter_name_or_path: /data/lihz/projects/instruct/IFT/code/lora
+template: llama3
+finetuning_type: lora
+
+### export
+export_dir: /data/lihz/projects/instruct/IFT/code/lora/merge
+export_size: 5
+export_device: cpu
+export_legacy_format: false

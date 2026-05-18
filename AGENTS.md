@@ -1,9 +1,9 @@
 # DYNA Repo Notes
 
-- DYNA is an umbrella workspace containing two independent upstream Git repos:
+- DYNA is a single monorepo that vendors two upstream codebases:
   `LLaMA-Factory` and `llama-recipes`.
-- Track the child repos from the top-level repo as submodules. Make code changes
-  inside the child repo that owns the file.
+- Make code changes in the directory that owns the file, but commit everything
+  from the top-level `DYNA` repo.
 - Do not commit generated training or evaluation artifacts. Keep directories such
   as `eval_results*`, `work_dir*`, `kernel_meta`, `output(s)`, `logs`, `runs`, `wandb`,
   `artifacts`, `checkpoints`, `ckpt`, and `saves` local-only.
